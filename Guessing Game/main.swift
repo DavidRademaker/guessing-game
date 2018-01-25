@@ -9,12 +9,27 @@
 import Foundation
 
 //generate random number
-var randomNumber = arc4random_uniform(100)
+var randomNumber = Int(arc4random_uniform(100))
+var guess: Int?
+var tries = 0
 //ask for input
 print("Guess a number 1-100")
+
 //take input
-var guess = readLine()
+
+guess = Int(readLine()!)!
+
 //determine if wrong or right   loop until corect
+
+while tries < 5 { if randomNumber == guess! {
+    print("You got it")
+} else if randomNumber < guess! {
+    print(" A little lower, guess again") }
+
+else if randomNumber > guess! {
+        print(" A little higher, guess Again") }
+tries += 1
+}
 
 //if correct ask if would like to play again
 
@@ -23,7 +38,4 @@ var guess = readLine()
 
 
 
-if guess = randomNumber {
-print("You Got It")
 
-}
