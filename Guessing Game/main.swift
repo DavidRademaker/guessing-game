@@ -17,7 +17,7 @@ while playingGame == true {
     let randomNumber = Int(arc4random_uniform(100))
     var guess: Int?
     var tries = 1
-    
+    print("Welcome to the guessing game")
     print("Guess a number 1-100")
     
     guess = Int(readLine()!)
